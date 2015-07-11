@@ -1,0 +1,16 @@
+<h1>Bienvenido a Quora!</h1>
+
+<form action="/log_in" method="post">
+	<input type="text" name="user[username]" placeholder="Usuario"><br><br>
+	<input type="password" name="user[password]" placeholder="Contraseña"><br><br>
+	<input type="submit" value="Iniciar Sesión">
+</form>
+<br>
+
+<form action="/" method="get">
+	<input type="submit" value="Regresar">
+</form>
+<br>
+
+<p id="error"><%= session[:errors] %></p>
+<% session[:errors] = nil %>

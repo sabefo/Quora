@@ -1,0 +1,19 @@
+<h1>Respuestas a la pregunta <%= @question.question %></h1>
+
+<form action="/create_answer/" method="get">
+	<input type="submit" value="Regresar">
+</form>
+<br>
+
+<form action="/create_answer/<%= @question.id %>" method="post">
+	Escribe una respuesta: <br>
+	<textarea cols="50" rows="4" name="answer"></textarea><br><br>
+	<input type="submit" value="Responder">
+</form>
+<br>
+
+<% if @answers %>
+	<% @answers.each do  |a| %>
+	<p>	<%= a.answers %></p><br>
+	<% end %>
+<% end %>

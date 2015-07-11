@@ -1,0 +1,17 @@
+<h1>Tus Preguntas</h1>
+
+<form action="/profile" method="get">
+	<input type="submit" value="Regresar">
+</form>
+<br>
+
+<% if @questions %>
+	<% @questions.each do  |q| %>
+		<p><%= q.question %></p><br>
+	<% end %>
+<% end %>
+
+<form action="/create_question" method="get">
+	<input type="submit" value="Crear pregunta">
+</form>
+<br>

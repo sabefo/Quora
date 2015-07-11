@@ -1,0 +1,16 @@
+<h1>Bienvenido <%= @user.name %>!</h1>
+
+<form action="/questions" method="get">
+	<input type="submit" value="Ver preguntas">
+</form>
+<br>
+
+<form action="/my_questions" method="get">
+	<input type="submit" value="Mis preguntas">
+</form>
+<br>
+
+<form action="/log_out" method="post">
+	<input type="submit" value="Salir">
+</form>
+<br>
